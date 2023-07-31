@@ -3,9 +3,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 import User from './Models/userSchema';
 import Comment from './Models/commentSchema';
-import News from './Models/newsSchema';
-
+import newsRouter from './routes/news';
 const app = express();
+
+
 
 
 // Connect to MongoDB
@@ -14,12 +15,21 @@ mongoose.connect('mongodb://127.0.0.1:27017/Formula1')
     .catch(err => console.error('Could not connect to mongoDB'));
 
 
+
+app.use('/api/news',newsRouter);
+
+
 const PORT = 3000;
 
-app.get('/news', async(req, res) => {
-    const news=await News.find();
-    res.send(news);
-});
+
+
+
+// app.get('/api/news/:teamName', async(req, res) => {
+//     const teamName=req.params.teamName;
+//     const keys=await Teams.findOne({TeamName:teamName},{KeyWords:1});
+//     const news=await News.find({tags :{$in : keys?.KeyWords}});
+//     res.send(news);
+// });
 
     
 app.listen(PORT, () => {
