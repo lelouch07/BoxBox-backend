@@ -16,7 +16,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/Formula1')
 
 const PORT = 3000;
 
-app.get('/', async(req, res) => {
+app.get('/news', async(req, res) => {
     const news=await News.find();
     res.send(news);
 });
