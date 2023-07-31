@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6", // The target ECMAScript version for the generated code
+        "module": "commonjs", // The module system to use (commonjs for Node.js)
+        "esModuleInterop": true, // Enables default import syntax for CommonJS modules
+        "outDir": "dist", // The output directory for compiled JavaScript files
+        "rootDir": "src", // The root directory where TypeScript source files are located
+        "strict": true, // Enable strict type-checking options
+        "jsx": "react" // The JSX option for React projects (or "preserve" for no JSX transpilation)
+        // Add other options as needed...
+    },
+    "include": [
+        "src"
+    ] // Specifies the files or directories to include in the compilation process
+}
