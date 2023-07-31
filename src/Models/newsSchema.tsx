@@ -4,7 +4,7 @@ interface INewsArticle extends Document {
     author:string;
     title: string;
     content: string;
-    teamName:string;
+    tags:string[];
     description:string;
     url:string;
     urlToImage:string;
@@ -16,9 +16,7 @@ const NewsArticleSchema: Schema = new Schema({
     author:{type:String , required:true},
     title: { type: String, required: true },
     content: { type: String, required: true },
-    teamName: { type: String, required: true },
-    description: { type: String, required: true },
-    url: { type: String, required: true },
+    tags: [{ type: String}],
     urlToImage: { type: String},
     publishedAt: { type: Date, required: true },
     comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],

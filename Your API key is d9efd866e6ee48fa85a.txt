@@ -5,14 +5,6 @@ Your API key is: d9efd866e6ee48fa85a5380e9d190018
 //\connect --user=root --host=localhost --port=3306 --password
 
 
-CREATE TABLE news_articles (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  author VARCHAR(255),
-  title VARCHAR(255) NOT NULL,
-teamName VARCHAR(255) NOT NULL,
-  description TEXT,
-  url VARCHAR(255),
-  urlToImage VARCHAR(255),
-  publishedAt DATETIME,
-  content TEXT
-);
+
+AIzaSyA_rGsF9v8BRCld4nWeLdCkBgCqfUoYOC4
+google api key
