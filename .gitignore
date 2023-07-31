@@ -1,4 +1,2 @@
 node_modules
-src/Models/commentSchema.tsx
-src/Models/newsSchema.tsx
-src/Models/userSchema.tsx
+
